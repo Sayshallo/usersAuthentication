@@ -1,0 +1,148 @@
+body {
+    background: #67B26F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #000;
+}
+
+.student-profile .card {
+    border-radius: 10px;
+}
+
+.student-profile .card .card-header .profile_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+}
+
+.student-profile .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.student-profile .card p {
+    font-size: 16px;
+    color: #000;
+}
+
+.student-profile .table th,
+.student-profile .table td {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #000;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.img-fluid {
+    border-radius: 15px;
+}
+
+a:has(> button.btn-product), .btn-product{
+    width: 100%;
+}
+
+a {
+    text-align: center;
+    transition: 0.3s;
+    font-weight: lighter;
+}
+
+a:hover {
+    scale: 1.01;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-name, .product-price {
+    text-align: center;
+}
+
+.row-cols-1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 0 0 auto;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+
+
+#notification-container {
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+    display: table-column;
+    top: 5vh;
+    z-index: 9999;
+}
+
+/* Добавлено */
+#notification-container::before {
+    content: '';
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.alert {
+    position: relative;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+    top: 0;
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+}
+
+/* Анимация появления */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Анимация исчезновения */
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+/* Keyframes для появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes для исчезновения */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px); /* Перемещаем вверх за экран */
+    }
+}
